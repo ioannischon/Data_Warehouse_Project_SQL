@@ -73,7 +73,7 @@ CREATE TABLE silver.erp_cust_az12
 (
 	cid NVARCHAR(50),
 	bdate DATE,
-	den NVARCHAR(50),
+	gen NVARCHAR(50),
 	dwp_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
