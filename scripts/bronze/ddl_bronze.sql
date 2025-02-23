@@ -70,7 +70,7 @@ CREATE TABLE bronze.erp_cust_az12
 (
 	cid NVARCHAR(50),
 	bdate DATE,
-	den NVARCHAR(50)
+	gen NVARCHAR(50)
 );
 GO
 
