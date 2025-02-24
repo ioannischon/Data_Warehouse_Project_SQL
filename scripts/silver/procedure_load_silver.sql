@@ -67,11 +67,12 @@ BEGIN
 				END AS cst_gndr,                        -- Normalize gender in readable format & Handling Missing Data
 				cst_create_date
 				FROM (
-				SELECT                                  -- Remove Duplicates from Primary Key and keeping the most recent documentation
-					*,
-					ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
-			FROM bronze.crm_cust_info
-			)r WHERE flag_last = 1;
+					SELECT                                  -- Remove Duplicates from Primary Key and keeping the most recent documentation
+						*,
+						ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
+					FROM bronze.crm_cust_info
+					WHERE cst_id IS NOT NULL
+				      )r WHERE flag_last = 1;
 
 		SET @end_time = GETDATE();
 			PRINT '>> Loading Duration is: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + ' seconds';
