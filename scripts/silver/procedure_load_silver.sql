@@ -23,7 +23,7 @@ ALTER   PROCEDURE [silver].[load_silver] AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @layer_start_time DATETIME, @layer_end_time DATETIME;
 		BEGIN TRY
-			SET @layer_start_time = GETDATE();
+		SET @layer_start_time = GETDATE();
 
 			PRINT '================================================================================================';
 			PRINT 'Loading Cleaned Data in the Silver Layer'
@@ -33,7 +33,7 @@ BEGIN
 			PRINT 'Loading Data in CRM Tables ';
 			PRINT '------------------------------------------------------------------------------------------------';
 
-			SET @start_time = GETDATE();
+		SET @start_time = GETDATE();
 			PRINT '>> Truncating Table: silver.crm_cust_info';
 			TRUNCATE TABLE silver.crm_cust_info;
 
@@ -48,7 +48,7 @@ BEGIN
 				cst_marital_status,
 				cst_gndr,
 				cst_create_date
-				)
+			)
 
 			SELECT 
 				cst_id,
