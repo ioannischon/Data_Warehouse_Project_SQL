@@ -21,7 +21,7 @@ Project Objective
 ------------------
 Develop a data warehouse using SQL Server to record and handle sales data, enabling analytical reporting and informed decision-making.
 
-This is achiec=ved by fulfilling these parameters: 
+This is achieved by fulfilling these parameters: 
   - Import Data from two different source systems, provided as CSV files.
   - Clean, normalize and standardize Data before any analysis.
   - Create a unified Data Model, user friendly that allows analysis and queries.
