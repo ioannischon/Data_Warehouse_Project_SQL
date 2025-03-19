@@ -43,4 +43,4 @@ License
 --------
 This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.
 
-![DWP Architecture](https://github.com/user-attachments/assets/29fd8173-30d0-42ad-817f-021ef0210f6d)
+
